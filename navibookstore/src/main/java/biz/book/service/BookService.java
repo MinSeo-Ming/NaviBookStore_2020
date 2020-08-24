@@ -1,4 +1,4 @@
-package biz.user.service;
+package biz.book.service;
 
 import java.util.List;
 
