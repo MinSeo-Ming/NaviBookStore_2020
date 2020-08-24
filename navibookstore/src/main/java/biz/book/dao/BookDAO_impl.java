@@ -1,4 +1,4 @@
-package biz.user.dao;
+package biz.book.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -36,7 +36,7 @@ public class BookDAO_impl implements BookDAO{
 			vo.setBookno(rs.getInt("bookno"));
 			vo.setCount(rs.getString("count"));
 			vo.setPublisher(rs.getString("publisher"));
-			vo.setImg(rs.getString("img"));
+			
 			return vo;
 		}
 	}
