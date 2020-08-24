@@ -6,20 +6,19 @@ public class BookVO {
 	String bookname;
 	String author;
 	String count;
-	String img;
 	//1-2-4 Ã¥ÀÇ °¹¼ö
 	
 	public BookVO() {
 		super();
 	}
 
-	public BookVO(int bookno, String publisher, String bookname, String author, String count,String img) {
+	public BookVO(int bookno, String publisher, String bookname, String author, String count) {
 		this.bookno = bookno;
 		this.publisher = publisher;
 		this.bookname = bookname;
 		this.author = author;
 		this.count = count;
-		this.img = img;
+		
 	}
 	
 	public int getBookno() {
@@ -53,12 +52,4 @@ public class BookVO {
 		this.count = count;
 	}
 
-	public String getImg() {
-		return img;
-	}
-
-	public void setImg(String img) {
-		this.img = img;
-	}
-	
 }

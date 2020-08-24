@@ -1,4 +1,4 @@
-package biz.user.dao;
+package biz.book.dao;
 
 import java.util.List;
 

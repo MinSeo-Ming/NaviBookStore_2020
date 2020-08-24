@@ -1,4 +1,4 @@
-package biz.user.service;
+package biz.book.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import biz.book.dao.BookDAO;
 import biz.book.vo.BookVO;
-import biz.user.dao.BookDAO;
 
 @Component("bookservice")
 public class BookService_impl implements BookService{
