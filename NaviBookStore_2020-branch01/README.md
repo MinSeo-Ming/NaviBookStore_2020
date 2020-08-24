@@ -1,1 +1,0 @@
-# NaviBookStore_2020
