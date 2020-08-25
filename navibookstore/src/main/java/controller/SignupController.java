@@ -34,7 +34,6 @@ public class SignupController {
 	}
 	@RequestMapping(value="/signup.do",method = RequestMethod.POST)
 	public String addUser(UserVO vo 	,HttpServletRequest req) throws Exception{
-		System.out.println(vo.getUserpwd());
 		service.addUser(vo);
 		return "redirect:/login.do";
 	}

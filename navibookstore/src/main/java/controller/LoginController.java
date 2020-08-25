@@ -25,7 +25,7 @@ public class LoginController {
 	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
 	public String loginpost(String id, String password ,HttpServletRequest req) {
 		UserVO vo = service.Login(id, password);
-		System.out.println(vo+"vo ê°ì²´");
+		System.out.println(vo+"·Î±×ÀÎ Áß");
 		HttpSession session = req.getSession();
 		if(vo!=null)
 		{
@@ -34,7 +34,7 @@ public class LoginController {
 		}
 		else
 		{
-			req.setAttribute("msg","ë‹¤ì‹œ ë¡œê·¸ì¸ í•´ì£¼ì„¸ìš”");
+			req.setAttribute("msg","·Î±×ÀÎ ½ÇÆĞ");
 			return "login";
 		}
 		
