@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8"%>
 <%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -33,17 +33,17 @@
 </style>
 <script>
 var i=0;
-var loc=["¾Ë¶óµò °­³²Á¡¿¡´Â","¾Ë¶óµò ´ëÀüÁ¡¿¡´Â","¾Ë¶óµò ºÎ»êÁ¡¿¡´Â"];
+var loc=["ì•Œë¼ë”˜ ê°•ë‚¨ì ì—ëŠ”","ì•Œë¼ë”˜ ëŒ€ì „ì ì—ëŠ”","ì•Œë¼ë”˜ ë¶€ì‚°ì ì—ëŠ”"];
 </script>
 <body>
+<%@ include file="/common/header.jsp" %>
 <div class="container">
-  <h2>Ã¥ ¸ñ·Ï</h2>
   <table class="table">
     <thead>
       <tr>
-        <th>Á¦¸ñ</th>
-        <th>ÀÛ°¡</th>
-        <th>ÃâÆÇ»ç</th>
+        <th>ì œëª©</th>
+        <th>ìž‘ê°€</th>
+        <th>ì¶œíŒì‚¬</th>
       </tr>
     </thead>
     <tbody>
@@ -55,7 +55,7 @@ var loc=["¾Ë¶óµò °­³²Á¡¿¡´Â","¾Ë¶óµò ´ëÀüÁ¡¿¡´Â","¾Ë¶óµò ºÎ»êÁ¡¿¡´Â"];
 				<td >${book.author}</td>
 				<td >
 				<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal${vs.index}" id="viewDetailButton${vs.index}">
-			         ±¸¸ÅÇÏ±â 
+			         êµ¬ë§¤í•˜ê¸° 
 			  	</button></td>	
 			</tr>
 
@@ -64,7 +64,7 @@ var loc=["¾Ë¶óµò °­³²Á¡¿¡´Â","¾Ë¶óµò ´ëÀüÁ¡¿¡´Â","¾Ë¶óµò ºÎ»êÁ¡¿¡´Â"];
 			  <div class="modal-dialog modal-dialog-centered" "role="document">
 			    <div class="modal-content">
 			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLongTitle">¼ö·®</h5>
+			        <h5 class="modal-title" id="exampleModalLongTitle">ìˆ˜ëŸ‰</h5>
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			          <span aria-hidden="true">&times;</span>
 			        </button>
@@ -79,8 +79,8 @@ var loc=["¾Ë¶óµò °­³²Á¡¿¡´Â","¾Ë¶óµò ´ëÀüÁ¡¿¡´Â","¾Ë¶óµò ºÎ»êÁ¡¿¡´Â"];
      					   	</script>
      					   	<span> </span>
      					   	${item}
-     					   	<span>°³°¡ ³²¾Ò½À´Ï´Ù.</span>
-     					   	 <button type="button" class="btn btn-secondary" id="mod_bt">±¸¸ÅÇÏ±â</button>
+     					   	<span>ê°œê°€ ë‚¨ì•˜ìŠµë‹ˆë‹¤.</span>
+     					   	 <button type="button" class="btn btn-secondary" id="mod_bt">êµ¬ë§¤í•˜ê¸°</button>
      					   	</div>
      					   	<br>	  
 			  			</c:forTokens>
@@ -94,5 +94,6 @@ var loc=["¾Ë¶óµò °­³²Á¡¿¡´Â","¾Ë¶óµò ´ëÀüÁ¡¿¡´Â","¾Ë¶óµò ºÎ»êÁ¡¿¡´Â"];
     </tbody>
   </table>
 </div>
+<%@ include file="/common/footer.jsp" %>
 </body>
 </html>
