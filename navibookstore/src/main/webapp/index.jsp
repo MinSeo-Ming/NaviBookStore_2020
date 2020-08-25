@@ -10,7 +10,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
+<<<<<<< HEAD
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
+=======
+
+>>>>>>> 196a75ba28b92374acc47bc1ce92101f3698857c
 <meta charset="UTF-8">
 <title>환영합니다.</title>
 <style type="text/css">
@@ -19,14 +23,19 @@ html,body {
     margin:0;
     padding:0;
     height:100%;
+<<<<<<< HEAD
 	background-image: url("${pageContext.request.contextPath}/resources/img/background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+=======
+
+>>>>>>> 196a75ba28b92374acc47bc1ce92101f3698857c
 }
 #container{
 min-height: 100%;
 position: relative;
 }
+<<<<<<< HEAD
 h1{
 position: absolute;
 font-family: 'Nanum Myeongjo', serif;
@@ -48,6 +57,12 @@ height: 60px;
 color: gray;
 }
 
+=======
+
+#center{
+padding-bottom: 30px;
+}
+>>>>>>> 196a75ba28b92374acc47bc1ce92101f3698857c
 </style>
 </head>
 <body>
@@ -56,6 +71,7 @@ color: gray;
 <div id="center">
 
 
+<<<<<<< HEAD
  	<h1>일상에 품격을 더하다</h1>
  	<form action="search.do" method="get">
 	<span id="search">
@@ -66,6 +82,8 @@ color: gray;
 	</span>
 	</form>
 
+=======
+>>>>>>> 196a75ba28b92374acc47bc1ce92101f3698857c
 
 
 </div>

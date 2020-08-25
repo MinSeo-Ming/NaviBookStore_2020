@@ -11,6 +11,7 @@ position: absolute;
 bottom: 0;
 left: 0;
 width: 100%;
+<<<<<<< HEAD
 height: 50px;
 padding-top: 15px;
 background-color: black;
@@ -20,6 +21,16 @@ background-color: black;
 margin : 0 auto;
 color: white;
 font-size :small;
+=======
+height: 30px;
+background-color: #f0f0f0;
+padding-bottom: 5px;
+margin-bottom: 5px;
+}
+#foot-cen{
+margin : 0 auto;
+color: #808080;
+>>>>>>> 196a75ba28b92374acc47bc1ce92101f3698857c
 font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 }
@@ -40,8 +51,11 @@ font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", R
 <td> yoonjaej3@gmail.com </td>
 <td></td>
 <td> changwanei@gmail.com </td>
+<<<<<<< HEAD
 <td></td>
 <td> chj2171@gmail.com </td>
+=======
+>>>>>>> 196a75ba28b92374acc47bc1ce92101f3698857c
 </tr>
 </table>
 
