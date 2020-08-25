@@ -1,10 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
-​
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
@@ -19,7 +15,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <style>
-#mod_bt{	
+#mod_bt{
 	position: relative;
   	left: 50px;
 }
@@ -37,18 +33,17 @@
 </style>
 <script>
 var i=0;
-var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부산점에는"];
+var loc=["�˶�� ����������","�˶�� ����������","�˶�� �λ�������"];
 </script>
-<%@ include file="/common/header.jsp" %>
 <body>
 <div class="container">
-	<br>
+  <h2>å ���</h2>
   <table class="table">
     <thead>
       <tr>
-        <th>제목</th>
-        <th>작가</th>
-        <th>출판사</th>
+        <th>����</th>
+        <th>�۰�</th>
+        <th>���ǻ�</th>
       </tr>
     </thead>
     <tbody>
@@ -60,7 +55,7 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 				<td >${book.author}</td>
 				<td >
 				<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal${vs.index}" id="viewDetailButton${vs.index}">
-			         구매하기 
+			         �����ϱ� 
 			  	</button></td>	
 			</tr>
 
@@ -69,7 +64,7 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 			  <div class="modal-dialog modal-dialog-centered" "role="document">
 			    <div class="modal-content">
 			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLongTitle">수량</h5>
+			        <h5 class="modal-title" id="exampleModalLongTitle">����</h5>
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			          <span aria-hidden="true">&times;</span>
 			        </button>
@@ -84,8 +79,8 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
      					   	</script>
      					   	<span> </span>
      					   	${item}
-     					   	<span>개가 남았습니다.</span>
-     					   	 <button type="button" class="btn btn-secondary" id="mod_bt">구매하기</button>
+     					   	<span>���� ���ҽ��ϴ�.</span>
+     					   	 <button type="button" class="btn btn-secondary" id="mod_bt">�����ϱ�</button>
      					   	</div>
      					   	<br>	  
 			  			</c:forTokens>
@@ -98,9 +93,6 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
  	   </c:forEach> 
     </tbody>
   </table>
-</div>
-</div>
-<%@ include file="/common/footer.jsp" %>
 </div>
 </body>
 </html>
