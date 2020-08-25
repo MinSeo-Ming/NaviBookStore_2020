@@ -33,12 +33,12 @@ padding-top:150px;
 
 table{
    top : 300px;
-   margin : 0 auto;
+   margin-left: 40%;
 }
 
 ul{
 	list-style : none;
-	margin-left : 41%;
+	margin-left : 36%;
 }
 ul>li{
 	display : inline;
@@ -58,6 +58,13 @@ ul>li{
 <div id="container">
 <%@ include file="/common/header.jsp" %>
 <div id="center">
+
+<c:if test="${!empty msg}">
+	<script>
+	alert("${msg}");
+	</script>
+</c:if>
+
 <fieldset>
 <form action = "login.do" method = "post">
    <table>
@@ -67,26 +74,22 @@ ul>li{
                   <input type="text" class="form-control" id = "id" name = "id" placeholder = "Username">
              </div>
              <div class="form-group">      
-                  <input type="password" class="form-control" id="password" name = "password"placeholder="Password">
+                  <input type="password" class="form-control" id="password" name = "password" placeholder="Password">
              </div>
          </td>
-         <td>
-             <input type="submit" class="btn btn-primary" value = "로그인">     
-         </td>
+         <td><input type="submit" class="btn btn-primary" value = "로그인"> </td>
       </tr>
    </table>
 </form>
+
 <ul>
-	<li>
-             <a href = "signup.do">회원가입</a>
-	</li>
-	<li>
-             <a href = "#">아이디찾기</a>
-	</li>
-    <li>
-             <a href = "#">비밀번호찾기</a>
-    </li>
+	<li> <a href ="signup.do">회원가입</a></li>
+	<li> <a href = "#">아이디찾기</a></li>
+    <li><a href = "#">비밀번호찾기</a> </li>
 </ul>
+
+
+
 
 <div class = "imgset">
   	<img src = "${pageContext.request.contextPath}/resources/img/01.jpg" alt = "이미지1" width = "270px">

@@ -19,7 +19,6 @@ html,body {
     margin:0;
     padding:0;
     height:100%;
-	background-image: url("${pageContext.request.contextPath}/resources/img/background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }

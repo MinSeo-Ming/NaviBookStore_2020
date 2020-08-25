@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
-
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <title>환영합니다.</title>
 <style type="text/css">
@@ -27,10 +27,27 @@ html,body {
 min-height: 100%;
 position: relative;
 }
-
+h1{
+position: absolute;
+font-family: 'Nanum Myeongjo', serif;
+text-align: center;
+color: white;
+text-shadow: 2px 2px 2px gray;
+top: 32%;
+left : 40%;
+}
 #center{
 padding-bottom: 50px;
 }
+#search{
+position: absolute;
+top: 40%;
+left: 30%;
+width: 600px;
+height: 60px;
+color: gray;
+}
+
 </style>
 </head>
 <body>
@@ -39,7 +56,15 @@ padding-bottom: 50px;
 <div id="center">
 
 
-
+ 	<h1>일상에 품격을 더하다</h1>
+ 	<form action="search.do" method="get">
+	<span id="search">
+	<input type="text" placeholder="검색어를 입력하세요." value="" style="border: 0px; height: 100%; width:80%; color: gray;
+	border-radius: 5px; background-color: white;" />
+	<button type="submit" id="ser" name="ser"
+	style="border: 0px; height: 100%; width: 15%; border-radius: 5px; ">검색</button>
+	</span>
+	</form>
 
 
 

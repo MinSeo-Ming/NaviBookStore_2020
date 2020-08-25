@@ -18,7 +18,7 @@ public class UserDAO_impl implements UserDAO {
 	
 	@Override
 	public UserVO Login(String id, String pwd) {
-		String sql = "select * from users where userid=? and userpwd = ?";
+		String sql = "select * from users where id=? and pwd = ?";
 		UserVO vo =null;
 		
 		try {
@@ -68,7 +68,6 @@ public class UserDAO_impl implements UserDAO {
 		return vo;
 	}
 	
-	//이건 ajax로 할지 생각해봐야함]
 	/*
 	@Override
 	public boolean IDcheck(String id) {
