@@ -18,6 +18,7 @@ public class BookService_impl implements BookService{
 	
 	@Override
 	public List<BookVO> searchBook(String condition, String keyword) {
+		System.out.println(dao.searchBook(condition, keyword));
 		return dao.searchBook(condition, keyword);
 	}
 }

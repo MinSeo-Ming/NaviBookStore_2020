@@ -1,5 +1,3 @@
-책 제목, 출판사, 저자, 서점( 1 / 3 / 2 )
-
 create table book(
 bookno number(2) primary key,
 publisher varchar2(25), 
@@ -27,4 +25,3 @@ constraint userpk primary key(id)
 book -> add book, booklist, 조회, 업데이트, 삭제, 상세정보
 유저 -> 로그인, adduser, updateuser, removeuser, userlist
 location -> 인서트, 딜리트, update
-
