@@ -28,6 +28,10 @@
   	left: 20px;
 
 }
+#th-buy{
+	position: relative;
+  	left: 50px;
+}
 
 
 </style>
@@ -38,12 +42,15 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 <body>
 <%@ include file="/common/header.jsp" %>
 <div class="container">
+	<br>
+	<br>
   <table class="table">
     <thead>
       <tr>
         <th>제목</th>
         <th>작가</th>
         <th>출판사</th>
+        <th id="th-buy">구매/사진</th>
       </tr>
     </thead>
     <tbody>
@@ -56,10 +63,14 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 				<td >
 				<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal${vs.index}" id="viewDetailButton${vs.index}">
 			         구매하기 
-			  	</button></td>	
+			  	</button>
+			  	<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2${vs.index}" id="viewDetailButton2${vs.index}">
+			         사진보기 
+			  	</button>
+			  	</td>		
 			</tr>
 
-			<!-- Modal -->
+			<!-- Modal(수량) -->
 			<div class="modal fade" id="myModal${vs.index}" role="dialog">
 			  <div class="modal-dialog modal-dialog-centered" "role="document">
 			    <div class="modal-content">
@@ -88,8 +99,27 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 			      </div>
 			    </div>
 			  </div>
+			 </div>
+			
 
-
+			<!-- Modal(사진) -->
+			<div class="modal fade" id="myModal2${vs.index}" role="dialog">
+			  <div class="modal-dialog modal-dialog-centered" "role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle">사진</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      
+			      <div class="modal-body">
+     					사진	  			
+			      </div>
+			    </div>
+			  </div>	  
+			</div>
+			
  	   </c:forEach> 
     </tbody>
   </table>
