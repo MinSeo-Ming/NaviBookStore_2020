@@ -29,6 +29,7 @@ position: relative;
 
 #center{
 padding-bottom: 30px;
+overflow: auto;
 }
 #switch{
 margin: 0 auto;
@@ -75,9 +76,8 @@ width: 400px;
 margin-top : 30px;
 }
 #imgs{
-position:absolute;
-top: 40%;
-left: 25%;
+margin: 0 auto;
+margin-top : 70px;
 width: 600px;
 height: 400px;
 }
@@ -102,9 +102,7 @@ height: 100%;
 	onclick="location.href='${pageContext.request.contextPath}/findpw.do'">Find PW</div>
 </div>
 
-	<div id="imgs">
-		<img  id="title" alt="~~~" src="resources/img/littleT.png" >
-	</div>
+
 	
 <div id="sec">
 <div class="form-group">
@@ -118,6 +116,9 @@ style="background-color: black; border-color: gray">아이디찾기</button>
 </div>
 
 
+<div id="imgs">
+	<img  id="title" alt="~~~" src="resources/img/littleT.png" >
+</div>
 
 
 </div>

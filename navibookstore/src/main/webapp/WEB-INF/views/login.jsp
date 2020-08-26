@@ -31,11 +31,10 @@ padding-bottom: 30px;
 }
 
 #sec{
-   top : 30%;
-   left: 35%;
-  position: absolute;
+margin: 0 auto;
+margin-top : 30px;
   width: 400px;
-  height: 400px;
+  height: 200px;
 }
 
 ul{
@@ -48,12 +47,18 @@ ul>li{
 }
 
 .imgset{
-margin-left: 100px;
-margin-top: 400px;
+margin: 0 auto;
+width: 80%;
 }
 .imgset>img{
 	padding : 50px;
 	display: inline-block;
+}
+#toptitle{
+margin: 0 auto;
+width: 20%;
+height: 20%;
+margin-top: 40px;
 }
 #title{
 width: 100%;
@@ -65,9 +70,11 @@ height: 100%;
 <body>
 <div id="container">
 <%@ include file="/common/header.jsp" %>
+
+
 <div id="center">
 
-	<div style="position: absolute;top:10%; left:40%; height: 12%; width: 23%;">
+	<div id="toptitle">
 		<img  id="title" alt="~~~" src="resources/img/title.png" >
 	</div>
 <c:if test="${!empty msg}">
@@ -102,10 +109,9 @@ style="background-color: black; border-color: gray">로그인</button>
   	<img src = "${pageContext.request.contextPath}/resources/img/2.jpg" alt = "이미지2" width = "270px">
   	<img src = "${pageContext.request.contextPath}/resources/img/3.jpg" alt = "이미지3" width = "270px">
   	<img src = "${pageContext.request.contextPath}/resources/img/4.jpg" alt = "이미지4" width = "270px">
-  
- 
 </div>
-    
+  	
+  	
 </div>
 
 <%@ include file="/common/footer.jsp" %>

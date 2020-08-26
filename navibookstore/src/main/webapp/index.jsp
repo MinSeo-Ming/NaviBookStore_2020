@@ -28,31 +28,34 @@ min-height: 100%;
 position: relative;
 }
 h1{
-position: absolute;
+margin: 0 auto;
+margin-top: 40%;
 font-family: 'Nanum Myeongjo', serif;
 text-align: center;
 color: white;
 text-shadow: 2px 2px 2px gray;
-top: 32%;
-left : 38%;
 }
 #center{
 padding-bottom: 50px;
 }
+
+
 #search{
-position: absolute;
-top: 40%;
-left: 30%;
-width: 600px;
-height: 60px;
-color: gray;
+margin: 0 auto;
+margin-top: 20px;
+width: 500px;
+height: 50px;
+background-color: white;
+border-radius: 5px;
 }
-#title{
-width:80%; 
-height:80%;
- position: absolute;
- top:10%;
- left:10%; 
+#inbtn{
+background-color: transparent;
+border: 0px;
+}
+#btn{
+border: 0px;
+background-color: white;
+border-left: 2px solid;
 }
 
 </style>
@@ -63,13 +66,15 @@ height:80%;
 <%@ include file="common/header.jsp" %>
 <div id="center">
 
-<img  id="title" alt="~~~" src="resources/img/title.png" >
+<div style="margin: 0 auto; margin-top: 300px;">
  	<h1>일상에 품격을 더하다</h1>
+ 	</div>
  	<form method="post" action="list2.do">
 	<div id="search">
-	<input type="text" name="searchContent" placeholder="검색어를 입력하세요." style="border: 0px; height: 100%; width:79%; color: gray;
-	border-radius: 5px; background-color: white; font-size: large;" />
-	<button type="submit" style="height: 100% ; width: 20%; border-radius: 5px; border: 0px;">검색</button>
+	<input id="inbtn" type="text" name="searchContent" placeholder="검색어를 입력하세요." 
+	style="height: 100%; width:79%; float: left;" />
+	 <button id="btn" type="submit" style="height: 100%; width: 20%; 
+	 font-size: large; font-weight: bold;">SEARCH</button>
 	</div>
 </form>
 

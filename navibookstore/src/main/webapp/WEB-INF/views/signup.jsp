@@ -55,7 +55,7 @@ margin-bottom: 20px;
 }
 #totalbox{
 margin: 0 auto;
-height: 350px;
+height: 500px;
 width: 390px;
 }
 .subbox{
@@ -151,7 +151,7 @@ $("#checkid").click(function(){
 <div id="container">
 <%@ include file="/common/header.jsp" %>
 <div id="center">
-
+ <form name ="f" action = "" method = "post">
 	<div id="imgs">
 		<img  id="title" alt="~~~" src="resources/img/littleT.png">
 	</div>
@@ -187,7 +187,7 @@ $("#checkid").click(function(){
 	<div class="subbox"><button type="button" class="btn btn-primary btn-lg btn-block" 
 	id = "signup" name = "signup" onclick="userCreate()" style="background-color: black; border-color: gray">가입하기</button></div>
 </div>
-
+</form>
 
 </div>
 <%@ include file="/common/footer.jsp" %>
