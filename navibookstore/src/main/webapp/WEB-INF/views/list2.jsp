@@ -183,15 +183,15 @@ function showMap(index) {
 
 	if(index==0)
 
-	   window.open("<%=request.getContextPath()%>/map.jsp","map","width=900,height=700");
+	   window.open("<%=request.getContextPath()%>/map.do","map","width=900,height=700");
 
 	else if(index==1)
 
-		   window.open("<%=request.getContextPath()%>/map2.jsp","map","width=900,height=700");
+		   window.open("<%=request.getContextPath()%>/map2.do","map","width=900,height=700");
 
 	else if(index==2)
 
-		   window.open("<%=request.getContextPath()%>/map3.jsp","map","width=900,height=700");
+		   window.open("<%=request.getContextPath()%>/map3.do","map","width=900,height=700");
 
 	}
 
