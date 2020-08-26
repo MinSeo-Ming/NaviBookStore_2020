@@ -98,10 +98,10 @@ style="background-color: black; border-color: gray">로그인</button>
 
 
 <div class = "imgset">
-  	<img src = "${pageContext.request.contextPath}/resources/img/01.jpg" alt = "이미지1" width = "270px">
-  	<img src = "${pageContext.request.contextPath}/resources/img/02.jpg" alt = "이미지2" width = "270px">
-  	<img src = "${pageContext.request.contextPath}/resources/img/03.jpg" alt = "이미지3" width = "270px">
-  	<img src = "${pageContext.request.contextPath}/resources/img/04.jpg" alt = "이미지4" width = "270px">
+  	<img src = "${pageContext.request.contextPath}/resources/img/1.jpg" alt = "이미지1" width = "270px">
+  	<img src = "${pageContext.request.contextPath}/resources/img/2.jpg" alt = "이미지2" width = "270px">
+  	<img src = "${pageContext.request.contextPath}/resources/img/3.jpg" alt = "이미지3" width = "270px">
+  	<img src = "${pageContext.request.contextPath}/resources/img/4.jpg" alt = "이미지4" width = "270px">
   
  
 </div>
