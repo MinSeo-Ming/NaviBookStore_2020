@@ -18,7 +18,7 @@ public class UserDAO_impl implements UserDAO {
 	
 	@Override
 	public UserVO Login(String id, String pwd) {
-		String sql = "select * from users where userid=? and userpwd = ?";
+		String sql = "select * from users where id=? and pwd = ?";
 		UserVO vo =null;
 		
 		try {
@@ -46,10 +46,10 @@ public class UserDAO_impl implements UserDAO {
 	
 	@Override
 	public UserVO findID(String name, String tel) {
-		String sql = "select id from users where name =? and tel=?";
+		String sql = "select * from users where name =? and tel=?";
 		UserVO vo =null;
 		try {
-			vo = template.queryForObject(sql,new Object[]{name,tel},new UserRowMapper() );
+			vo = template.queryForObject(sql,new Object[]{name,tel},new UserRowMapper());
 		}catch (Exception e) {
 			
 		}
@@ -58,7 +58,7 @@ public class UserDAO_impl implements UserDAO {
 	
 	@Override
 	public UserVO findPW(String id, String name, String tel) {
-		String sql = "select id from users where id =? and name =? and tel=?";
+		String sql = "select * from users where id =? and name =? and tel=?";
 		UserVO vo =null;
 		try {
 			vo = template.queryForObject(sql,new Object[]{id,name,tel},new UserRowMapper() );
@@ -67,23 +67,19 @@ public class UserDAO_impl implements UserDAO {
 		}
 		return vo;
 	}
-	
-	//이건 ajax로 할지 생각해봐야함]
-	/*
 	@Override
-	public boolean IDcheck(String id) {
-		String sql = "select id from users where id =?";
-		UserVO vo =null;
-		try {
-			vo =template.queryForObject(sql,new Object[]{id},new UserRowMapper() );
-			if(vo==null) {
-				return true;
-			}
-		}catch (Exception e) {
-			// TODO: handle exception
-		}
-		return false;
-	}*/
+	   public int  IDcheck(String id) {
+	      String sql = "select * from users where id = ?";
+	      UserVO vo =null;
+	      int result=0;
+	      try {
+	         vo = template.queryForObject(sql,new Object[]{id},new UserRowMapper() );
+	         result =1;
+	         return result;
+	      }catch (Exception e) {
+	         return result;
+	      }      
+	   }
 	
 	class UserRowMapper implements RowMapper<UserVO>{
 		@Override
@@ -98,4 +94,8 @@ public class UserDAO_impl implements UserDAO {
 			return vo;
 		}
 	}
+	
+	
+	
+	
 }

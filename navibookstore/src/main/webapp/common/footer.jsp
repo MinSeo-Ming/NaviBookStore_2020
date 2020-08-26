@@ -14,14 +14,12 @@ width: 100%;
 height: 50px;
 padding-top: 15px;
 background-color: black;
-
 }
 #foot-cen{
 margin : 0 auto;
 color: white;
 font-size :small;
 font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
 }
 #foot-cen td{
  width: 70px;
@@ -42,6 +40,7 @@ font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", R
 <td> changwanei@gmail.com </td>
 <td></td>
 <td> chj2171@gmail.com </td>
+
 </tr>
 </table>
 

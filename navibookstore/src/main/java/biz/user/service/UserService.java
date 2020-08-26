@@ -8,5 +8,6 @@ public interface UserService {
 	UserVO findPW(String id,String name, String phone);
 	UserVO findID(String name, String phone);
 	//boolean IDcheck(String id);
-	//이건 생각할 필요가 있ㅇㅁ
+	int IDcheck(String id);
+
 }
