@@ -68,8 +68,6 @@
 
  
 
- 
-
 </style>
 
 <script>
@@ -231,13 +229,13 @@ function showMap(index) {
 
 			<div class="modal fade" id="myModal2${vs.index}" role="dialog">
 
-			  <div class="modal-dialog modal-dialog-centered" "role="document">
+			  <div class="modal-dialog modal-dialog-centered modal"style="max-width: 100%; width: auto; display: table;" "role="document">
 
 			    <div class="modal-content">
 
 			      <div class="modal-header">
 
-			        <h5 class="modal-title" id="exampleModalLongTitle">사진</h5>
+			  
 
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 
@@ -253,7 +251,7 @@ function showMap(index) {
 
   
 
-				<img src="<c:url value='./resources/img/${book.bookno}.jpg' />" id="img${vs.index}" width="100" height="100">
+				<img src="<c:url value='./resources/img/${book.bookno}.jpg' />" class="img-fluid rounded" width=300px height=100px>
 
 			      </div>
 
