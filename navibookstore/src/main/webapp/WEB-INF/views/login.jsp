@@ -28,29 +28,37 @@ position: relative;
 
 #center{
 padding-bottom: 30px;
-padding-top:150px;
 }
 
-table{
-   top : 300px;
-   margin-left: 40%;
+#sec{
+   top : 30%;
+   left: 35%;
+  position: absolute;
+  width: 400px;
+  height: 400px;
 }
 
 ul{
 	list-style : none;
-	margin-left : 36%;
 }
 ul>li{
 	display : inline;
-	padding : 4px;
+	padding : 10px;
 
 }
 
 .imgset{
-	text-align : center;
+margin-left: 100px;
+margin-top: 400px;
 }
 .imgset>img{
 	padding : 50px;
+	display: inline-block;
+}
+#title{
+width: 100%;
+height: 100%;
+
 }
 </style>
 </head>
@@ -59,35 +67,33 @@ ul>li{
 <%@ include file="/common/header.jsp" %>
 <div id="center">
 
+	<div style="position: absolute;top:10%; left:40%; height: 12%; width: 23%;">
+		<img  id="title" alt="~~~" src="resources/img/title.png" >
+	</div>
 <c:if test="${!empty msg}">
 	<script>
 	alert("${msg}");
 	</script>
 </c:if>
 
-<fieldset>
+<div id="sec">
 <form action = "login.do" method = "post">
-   <table>
-      <tr>
-         <td>
-            <div class="form-group">   
-                  <input type="text" class="form-control" id = "id" name = "id" placeholder = "Username">
-             </div>
-             <div class="form-group">      
-                  <input type="password" class="form-control" id="password" name = "password" placeholder="Password">
-             </div>
-         </td>
-         <td><input type="submit" class="btn btn-primary" value = "로그인"> </td>
-      </tr>
-   </table>
+<div class="form-group">
+  <input type="text" class="form-control" placeholder="Username" id="id" name="id">
+</div>
+<div class="form-group">
+  <input type="password" class="form-control" placeholder="password" id="password" name="password">
+</div>
+<button type="submit" class="btn btn-primary btn-lg btn-block"
+style="background-color: black; border-color: gray">로그인</button>
 </form>
-
+<br>
 <ul>
-	<li> <a href ="signup.do">회원가입</a></li>
-	<li> <a href = "#">아이디찾기</a></li>
-    <li><a href = "#">비밀번호찾기</a> </li>
+	<li> <a href ="${pageContext.request.contextPath}/signup.do">회원가입</a></li>
+	<li> <a href = "${pageContext.request.contextPath}/findid.do">아이디찾기</a></li>
+    <li><a href = "${pageContext.request.contextPath}/findpw.do">비밀번호찾기</a> </li>
 </ul>
-
+</div>
 
 
 
@@ -96,12 +102,12 @@ ul>li{
   	<img src = "${pageContext.request.contextPath}/resources/img/02.jpg" alt = "이미지2" width = "270px">
   	<img src = "${pageContext.request.contextPath}/resources/img/03.jpg" alt = "이미지3" width = "270px">
   	<img src = "${pageContext.request.contextPath}/resources/img/04.jpg" alt = "이미지4" width = "270px">
-  	<img src = "${pageContext.request.contextPath}/resources/img/05.jpg" alt = "이미지5" width = "270px">
+  
  
 </div>
-
-</fieldset>    
+    
 </div>
+
 <%@ include file="/common/footer.jsp" %>
 </div>
 

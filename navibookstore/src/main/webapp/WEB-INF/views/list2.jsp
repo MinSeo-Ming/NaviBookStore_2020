@@ -1,9 +1,11 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+
+   pageEncoding="UTF-8"%>
+
+<%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
+
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <!DOCTYPE html>
@@ -30,7 +32,7 @@
 
 <style>
 
-#mod_bt{	
+#mod_bt{
 
 	position: relative;
 
@@ -56,6 +58,14 @@
 
 }
 
+#th-buy{
+
+	position: relative;
+
+  	left: 50px;
+
+}
+
  
 
  
@@ -76,7 +86,9 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 
 <div class="container">
 
-  <h2>책 목록</h2>
+	<br>
+
+	<br>
 
   <table class="table">
 
@@ -90,6 +102,8 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 
         <th>출판사</th>
 
+        <th><span id="th-buy">구매/사진</span></th>
+
       </tr>
 
     </thead>
@@ -100,7 +114,7 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 
  
 
-	  		<tr class="table-secondary">
+	  		<tr class="table-light">
 
 	  			<td >${book.bookname}</td>
 
@@ -114,13 +128,21 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 
 			         구매하기 
 
-			  	</button></td>	
+			  	</button>
+
+			  	<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2${vs.index}" id="viewDetailButton2${vs.index}">
+
+			         사진보기 
+
+			  	</button>
+
+			  	</td>		
 
 			</tr>
 
  
 
-			<!-- Modal -->
+			<!-- Modal(수량) -->
 
 			<div class="modal fade" id="myModal${vs.index}" role="dialog">
 
@@ -178,9 +200,49 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 
 			  </div>
 
- 
+			 </div>
+
+			
 
  
+
+			<!-- Modal(사진) -->
+
+			<div class="modal fade" id="myModal2${vs.index}" role="dialog">
+
+			  <div class="modal-dialog modal-dialog-centered" "role="document">
+
+			    <div class="modal-content">
+
+			      <div class="modal-header">
+
+			        <h5 class="modal-title" id="exampleModalLongTitle">사진</h5>
+
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+			          <span aria-hidden="true">&times;</span>
+
+			        </button>
+
+			      </div>
+
+			      
+
+			      <div class="modal-body">
+
+  
+
+				<img src="<c:url value='./resources/img/${book.bookno}.jpg' />" id="img${vs.index}" width="100" height="100">
+
+			      </div>
+
+			    </div>
+
+			  </div>	  
+
+			</div>
+
+			
 
  	   </c:forEach> 
 
@@ -189,6 +251,8 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
   </table>
 
 </div>
+
+<%@ include file="/common/footer.jsp" %>
 
 </body>
 

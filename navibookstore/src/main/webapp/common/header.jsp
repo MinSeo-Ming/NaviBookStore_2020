@@ -7,18 +7,13 @@
 
 <style>
 #header{
-<<<<<<< HEAD
 height: 50px;
 background-color: black;
-=======
-height: 30px;
->>>>>>> 196a75ba28b92374acc47bc1ce92101f3698857c
 }
 
 </style>
 
 <div id="header">
-<<<<<<< HEAD
 <ol class="breadcrumb" id="head1" style="justify-content: flex-end; background-color: black">
   <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/index.jsp" style="color:white;" >home</a></li>
   <c:if test="${empty login}">
@@ -27,10 +22,5 @@ height: 30px;
    <c:if test="${!empty login }">
   <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/logout.do" style="color: gray">Logout</a></li>
   </c:if>
-=======
-<ol class="breadcrumb" id="head1" style="justify-content: flex-end;">
-  <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/index.jsp" style="color: gray;" >home</a></li>
-  <li class="breadcrumb-item"><a href="#" style="color: gray">Logout</a></li>
->>>>>>> 196a75ba28b92374acc47bc1ce92101f3698857c
 </ol>
 </div>

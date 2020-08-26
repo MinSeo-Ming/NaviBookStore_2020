@@ -10,11 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
-<<<<<<< HEAD
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
-=======
-
->>>>>>> 196a75ba28b92374acc47bc1ce92101f3698857c
 <meta charset="UTF-8">
 <title>환영합니다.</title>
 <style type="text/css">
@@ -23,19 +19,14 @@ html,body {
     margin:0;
     padding:0;
     height:100%;
-<<<<<<< HEAD
 	background-image: url("${pageContext.request.contextPath}/resources/img/background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-=======
-
->>>>>>> 196a75ba28b92374acc47bc1ce92101f3698857c
 }
 #container{
 min-height: 100%;
 position: relative;
 }
-<<<<<<< HEAD
 h1{
 position: absolute;
 font-family: 'Nanum Myeongjo', serif;
@@ -43,7 +34,7 @@ text-align: center;
 color: white;
 text-shadow: 2px 2px 2px gray;
 top: 32%;
-left : 40%;
+left : 38%;
 }
 #center{
 padding-bottom: 50px;
@@ -56,34 +47,32 @@ width: 600px;
 height: 60px;
 color: gray;
 }
-
-=======
-
-#center{
-padding-bottom: 30px;
+#title{
+width:80%; 
+height:80%;
+ position: absolute;
+ top:10%;
+ left:10%; 
 }
->>>>>>> 196a75ba28b92374acc47bc1ce92101f3698857c
+
 </style>
 </head>
 <body>
+
 <div id="container">
 <%@ include file="common/header.jsp" %>
 <div id="center">
 
-
-<<<<<<< HEAD
+<img  id="title" alt="~~~" src="resources/img/title.png" >
  	<h1>일상에 품격을 더하다</h1>
- 	<form action="search.do" method="get">
-	<span id="search">
-	<input type="text" placeholder="검색어를 입력하세요." value="" style="border: 0px; height: 100%; width:80%; color: gray;
-	border-radius: 5px; background-color: white;" />
-	<button type="submit" id="ser" name="ser"
-	style="border: 0px; height: 100%; width: 15%; border-radius: 5px; ">검색</button>
-	</span>
-	</form>
+ 	<form action="list2.do">
+	<div id="search">
+	<input type="text" placeholder="검색어를 입력하세요." style="border: 0px; height: 100%; width:79%; color: gray;
+	border-radius: 5px; background-color: white; font-size: large;" />
+	<button type="submit" style="height: 100% ; width: 20%; border-radius: 5px; border: 0px;">검색</button>
+	</div>
+</form>
 
-=======
->>>>>>> 196a75ba28b92374acc47bc1ce92101f3698857c
 
 
 </div>

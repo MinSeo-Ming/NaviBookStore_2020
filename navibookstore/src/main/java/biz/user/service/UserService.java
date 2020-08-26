@@ -8,5 +8,6 @@ public interface UserService {
 	UserVO findPW(String id,String name, String phone);
 	UserVO findID(String name, String phone);
 	//boolean IDcheck(String id);
+	int IDcheck(String id);
 
 }

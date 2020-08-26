@@ -47,6 +47,12 @@ public class UserVO {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+	@Override
+	public String toString() {
+		return "UserVO [username=" + username + ", phone=" + phone + ", userid=" + userid + ", userpwd=" + userpwd
+				+ ", address=" + address + "]";
+	}
 	
 	
 	
