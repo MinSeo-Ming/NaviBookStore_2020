@@ -18,15 +18,11 @@ public class SignupController {
 	@Autowired
 	private UserService service;
 	
-	@RequestMapping(value ="/check_id.do", method =RequestMethod.GET)
+	@RequestMapping(value ="/user/idCheck", method =RequestMethod.GET)
 	@ResponseBody
-	public int idCheck(@RequestParam("id") String user_id) {
-		UserVO vo = service.IDcheck(user_id);
-		if(vo!=null)
-			return 1;
-		else
-			return 0;
-		
+	public int idCheck(@RequestParam("userId") String user_id) {
+		System.out.println(service.IDcheck(user_id));
+		return service.IDcheck(user_id);
 	}
 	@RequestMapping(value="/signup.do",method = RequestMethod.GET)
 	public String addUser() {

@@ -35,10 +35,10 @@ public class UserService_impl implements UserService{
 	public UserVO findPW(String id, String name, String phone) {
 		return dao.findPW(id, name, phone);
 	}
-	//밑엔 바꿔야 할 수도 있음.
+	//諛묒뿏 諛붽퓭�빞 �븷 �닔�룄 �엳�쓬.
 	
 	@Override
-	public UserVO  IDcheck(String id) {
+	public int  IDcheck(String id) {
 		return dao.IDcheck(id);
 	}
 	

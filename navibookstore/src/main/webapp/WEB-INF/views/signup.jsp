@@ -50,23 +50,36 @@ table{
 </style>
 <script type="text/javascript">
 
+let user_id
 function userCreate(){
 	f.action="signup.do";
 	f.method="post";
 	f.submit();
 }
 
-let user_id
+
+$(function(){
+
+	//비밀번호 확인
+		$('#password2').blur(function(){
+		   if($('#userpwd').val() != $('#password2').val()){
+		    	if($('#password2').val()!=''){
+			    alert("비밀번호가 일치하지 않습니다.");
+		    	    $('#password2').val('');
+		          $('#password2').focus();
+		       }
+		    }
+		})  	   
+	});
+
+
+
+
 $(function(){
 $("#checkid").click(function(){
-	//이부분 ajax로 추후 구현
-	//alert("사용가능한 아이디 입니다.");
-
 	user_id =$('#id').val();
 	$.ajax({
-		url:"check_id.do",
-		data:user_id ,
-		dataType : "json",
+		url:'${pageContext.request.contextPath}/user/idCheck?userId='+user_id,
 		type : 'GET',
 		contentType: "application/json; charset=UTF-8",
 		success : function(data){//일단 내가 설정하기론 true false했음
@@ -74,22 +87,17 @@ $("#checkid").click(function(){
 			
 			if(data>0){
 				alert("사용불가능한 아이디 입니다.")
-				$("#id").text("사용중인 아이디 입니다! ");
-				$("#id").css(color,red);
-				$("#id").attr("disabled",true);
 				
 			}else if(data==0){
 				if(user_id == ""){
+				alert(" 아이디를 입력해주세요.")
 					
-					$('#id_check').text('아이디를 입력해주세요 :)');
-					$('#id_check').css('color', 'red');
-					$("#reg_submit").attr("disabled", true);
 				}
 				else{
-					alert("사용가능한 아이디 입니다2.")
+					alert("사용가능한 아이디 입니다.")
 				}
 			
-			}else{alert("뭔가 잘못됨")}
+			}
 			
 		},//success
 		 error : function() {
@@ -154,7 +162,7 @@ $("#checkid").click(function(){
             전화번호:
          </td>
          <td colspan = "2">
-            <input type="text" class="form-control" id = "password2" name = "phone" value = "${user.phone }"placeholder = "010-0000-0000">
+            <input type="text" class="form-control" id = "phone" name = "phone" value = "${user.phone }"placeholder = "010-0000-0000">
          </td>
          <td>
 
@@ -165,33 +173,13 @@ $("#checkid").click(function(){
             주소:
          </td>
          <td colspan = "2">
-            <input type="text" class="form-control" id = "password2" name = "address" value = "${user.address }" placeholder = "주소">
+            <input type="text" class="form-control" id = "address" name = "address" value = "${user.address }" placeholder = "주소">
          </td>
          <td>
 
          </td>
       </tr>
-      <tr id = "check">
-         <td>
-         
-         </td>
-         <td>
-            <button type = "button" id = 'checkaddress' name = 'checkaddress' class = "btn btn-primary">주소찾기</button>
-         </td>
-         <td>
-
-         </td>
-      </tr>
-      <tr>
-         <td colspan = '3'>
-            
-         </td>
-         <td>
-         </td>
-         <td>
-
-         </td>
-      </tr>
+     
    </table>
    <div id = "signupdiv">
 			<button type="button" class="btn btn-primary btn-lg btn-block" id = "signup" name = "signup" onclick="userCreate()">가입하기</button>

@@ -7,6 +7,6 @@ public interface UserService {
 	int addUser(UserVO user)throws Exception;
 	UserVO findPW(String id,String name, String phone);
 	UserVO findID(String name, String phone);
-	UserVO  IDcheck(String id);
-	//이건 생각할 필요가 있ㅇㅁ
+	int  IDcheck(String id);
+	//�씠嫄� �깮媛곹븷 �븘�슂媛� �엳�뀋�뀅
 }

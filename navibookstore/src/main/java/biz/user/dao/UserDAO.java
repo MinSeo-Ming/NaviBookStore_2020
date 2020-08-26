@@ -7,7 +7,7 @@ public interface UserDAO {
 	int addUser(UserVO user)throws Exception;
 	UserVO findPW(String id,String name, String tel);
 	UserVO findID(String name, String tel);
-	UserVO  IDcheck(String id);
-	//이건 실시간으로 해야하는거지...
+	int  IDcheck(String id);
+	//�씠嫄� �떎�떆媛꾩쑝濡� �빐�빞�븯�뒗嫄곗�...
 	
 }

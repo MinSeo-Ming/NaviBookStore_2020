@@ -67,18 +67,22 @@ public class UserDAO_impl implements UserDAO {
 		return vo;
 	}
 	
-	//이건 ajax로 할지 생각해봐야함]
+	//�씠嫄� ajax濡� �븷吏� �깮媛곹빐遊먯빞�븿]
 	
 	@Override
-	public UserVO  IDcheck(String id) {
-		String sql = "select count(*) from users where id = ?";
+	public int  IDcheck(String id) {
+		String sql = "select * from users where id = ?";
 		UserVO vo =null;
+		int result =0;
 		try {
 			vo = template.queryForObject(sql,new Object[]{id},new UserRowMapper() );
+			if(vo!=null) {
+				result =1;
+			}
 		}catch (Exception e) {
 			
 		}
-		return vo;
+		return result;
 	}
 	
 	class UserRowMapper implements RowMapper<UserVO>{
