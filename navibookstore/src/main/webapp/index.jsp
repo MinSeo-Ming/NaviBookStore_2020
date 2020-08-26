@@ -65,14 +65,13 @@ height:80%;
 
 <img  id="title" alt="~~~" src="resources/img/title.png" >
  	<h1>일상에 품격을 더하다</h1>
- 	<form action="list2.do">
+ 	<form method="post" action="list2.do">
 	<div id="search">
-	<input type="text" placeholder="검색어를 입력하세요." style="border: 0px; height: 100%; width:79%; color: gray;
+	<input type="text" name="searchContent" placeholder="검색어를 입력하세요." style="border: 0px; height: 100%; width:79%; color: gray;
 	border-radius: 5px; background-color: white; font-size: large;" />
 	<button type="submit" style="height: 100% ; width: 20%; border-radius: 5px; border: 0px;">검색</button>
 	</div>
 </form>
-
 
 
 </div>

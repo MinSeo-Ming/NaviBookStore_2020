@@ -74,7 +74,7 @@ table{
 </style>
 <body>
 <div id="container">
-<%@ include file="common/header.jsp" %>
+<%@ include file="common/header2.jsp" %>
 <div id="center">
 <table>
 	<tr >
@@ -82,7 +82,7 @@ table{
 			<div id = map> </div>
 		</td>
 		<td id = "td"> 
-		<div id = "d1">도착위치 <br> 알라딘 강남점</div>
+		<div id = "d1">도착위치 <br> 알라딘 부산점</div>
 		<br>
 
 		<div id = "d2">
@@ -106,23 +106,23 @@ table{
 </div>
 <script type="text/javascript">
 	let p = {
-		lat : 37.5014274,
-		lng : 127.0241172
+		lat : 35.1702742,
+		lng : 129.1310704
 	};
 	let map = new google.maps.Map(document.getElementById('map'),
 									{zoom:15, center:p}); //map객체 생성
 	let marker = new google.maps.Marker({
 		position : p,
 		map : map,
-		label : '알라딘 강남점'		
+		label : '알라딘 부산점'		
 	});
 </script>
 <script>
 $(function(){
 	let error;
-	let apiurl = "http://api.openweathermap.org/data/2.5/weather?q="+"Seoul"+"&appid="+"266b1cd671e1d160d627f5513d795cd6";
+	let apiurl = "http://api.openweathermap.org/data/2.5/weather?q="+"Busan"+"&appid="+"266b1cd671e1d160d627f5513d795cd6";
 	$("#details").click(function(){
-		location.href = "https://www.google.com/maps/place/%EC%95%8C%EB%9D%BC%EB%94%98+%EC%A4%91%EA%B3%A0%EC%84%9C%EC%A0%90+%EA%B0%95%EB%82%A8%EC%A0%90/@37.5015449,127.0252981,17.25z/data=!4m5!3m4!1s0x357ca158f4bb1667:0x15a6780413a19ca7!8m2!3d37.5014232!4d127.0263059?hl=ko"			
+		location.href = "https://www.google.co.kr/maps/place/%EC%95%8C%EB%9D%BC%EB%94%98+%EC%A4%91%EA%B3%A0%EC%84%9C%EC%A0%90+%EB%B6%80%EC%82%B0%EC%84%BC%ED%85%80%EC%A0%90/@35.1702742,129.1310704,17.04z/data=!4m8!1m2!2m1!1z7JWM652865SY67aA7IKw!3m4!1s0x356892c099aec7bd:0x867474f7319ccf8f!8m2!3d35.1702405!4d129.1323684?hl=ko"			
 	});//#detail close
 	
 		$.ajax({
@@ -133,7 +133,7 @@ $(function(){
 				console.log(data.main.temp-273.15);
 				console.log(data.weather[0].main);
 				console.log(data.weather[0].description);
-				let tag = "현재강남점의 날씨는..<br> "+ Math.round(data.main.temp-273.15) +"℃ / "+ data.weather[0].main;
+				let tag = "현재부산점의 날씨는..<br> "+ Math.round(data.main.temp-273.15) +"℃ / "+ data.weather[0].main;
 				if(data.weather[0].main=="Clouds"){
 					$('#weatherimg').attr('src',"${pageContext.request.contextPath}/resources/img/구름.JPG")
 				}

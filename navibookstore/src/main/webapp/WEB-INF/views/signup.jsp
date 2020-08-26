@@ -29,26 +29,55 @@ position: relative;
 
 #center{
 padding-bottom: 30px;
-padding-top:150px;
 }
 
-table{
-   top : 300px;
-   margin : 0 auto;
+#imgs{
+margin: 0 auto;
+width: 225px;
+height: 180px;
+padding-top: 0px;
 }
-#signupdiv{
-	width : 100%;
-	text-align : center;
+#imgs img{
+width: 100%;
+height: 100%;
 }
-#signup{
-	width : 20%;
-	margin-top : 0.5%;
-	margin-left : 40.5%;
-
+#sec{
+margin-top: 0px;
+margin: 0 auto;
+font-family: fantasy;
+font-size: x-large;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+text-align: center;
+width: 400px;
+font-weight: bolder;
+margin-bottom: 20px;
 }
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+#totalbox{
+margin: 0 auto;
+height: 350px;
+width: 390px;
+}
+.subbox{
+height: 40px;
+}
+.left{
+width: 80%;
+float: left;
+}
+.right{
+width: 19%;
+float:right;
+}
+.textt{
+text-align: left;
+font-family: fantasy;
+font-size: medium;
+font-weight: 700;
+}
 	
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 
 let user_id
@@ -123,77 +152,42 @@ $("#checkid").click(function(){
 <%@ include file="/common/header.jsp" %>
 <div id="center">
 
-
-<div id="imgs">
-		<img  id="title" alt="~~~" src="resources/img/littleT.png" >
+	<div id="imgs">
+		<img  id="title" alt="~~~" src="resources/img/littleT.png">
 	</div>
-  <fieldset>
-   <form name ="f" action = "" method = "post">
-   <table>   
-      <tr>
-         <td> 이름 :</td>
-         <td colspan = "2">   <input type="text" class="form-control" id = "name" name = "username" placeholder = "이름 입력">   </td>
-         <td></td>
-      </tr>
-      <tr>
-         <td>          아이디 :    </td>
-         <td>    <input type="text" class="form-control" id = "id" name = "userid" value = "${user.userid}"placeholder = "아이디 입력">     
-         	<div class =result_check id =result_check></div>  </td>
-         <td><button type = "button" id = 'checkid' name = 'checkid' class = "btn btn-primary">아이디확인</button></td>
-      </tr>
-      <tr>
-         <td>
-            비밀번호 :
-         </td>
-         <td colspan = "2">
-            <input type="password" class="form-control" id = "userpwd" value = "${user.userpwd}" name = "userpwd" placeholder = "비밀번호입력">
-         </td>
-         <td>
+	<div id="sec">회원가입</div>
 
-         </td>
-      </tr>
-      <tr>
-         <td>
-            비밀번호 확인:
-         </td>
-         <td colspan = "2">
-            <input type="password" class="form-control" id = "password2" name = "password2" placeholder = "비밀번호확인">
-         </td>
-         <td>
+<div id="totalbox">
+	<div class="textt">이름</div>
+	<div class="subbox">
+		<input type="text" class="form-control" id = "name" name = "username" placeholder = "이름 입력">
+	</div>
+	<div class="textt">아이디</div>
+	<div class="subbox">
+		<div class="left"><input type="text" class="form-control" id = "id" name = "userid" value = "${user.userid}"placeholder = "아이디 입력"></div>
+		<div class="right"><button type = "button" id = 'checkid' name = 'checkid' class = "btn btn-primary" style="background-color: black; border-color: gray">중복확인</button></div>
+	</div>
+	<div class="textt">비밀번호</div>
+	<div class="subbox">
+	<input type="password" class="form-control" id = "userpwd" value = "${user.userpwd}" name = "userpwd" placeholder = "비밀번호입력">
+	</div>
+	<div class="textt">비밀번호 확인</div>
+	<div class="subbox">
+		 <input type="password" class="form-control" id = "password2" name = "password2" placeholder = "비밀번호확인">
+	</div>
+	<div class="textt">전화번호</div>
+	<div class="subbox">
+		<input type="text" class="form-control" id = "phone" name = "phone" value = "${user.phone }"placeholder = "010-0000-0000">
+	</div>
+	<div class="textt">주소</div>
+	<div class="subbox">
+		<input type="text" class="form-control" id = "address" name = "address" value = "${user.address }" placeholder = "주소">
+	</div>
+	<div style="margin-top: 2px;"></div>
+	<div class="subbox"><button type="button" class="btn btn-primary btn-lg btn-block" 
+	id = "signup" name = "signup" onclick="userCreate()" style="background-color: black; border-color: gray">가입하기</button></div>
+</div>
 
-         </td>
-      </tr>
-      <tr>
-         <td>
-            전화번호:
-         </td>
-         <td colspan = "2">
-            <input type="text" class="form-control" id = "phone" name = "phone" value = "${user.phone }"placeholder = "010-0000-0000">
-         </td>
-         <td>
-
-         </td>
-      </tr>
-      <tr>
-         <td>
-            주소:
-         </td>
-         <td colspan = "2">
-            <input type="text" class="form-control" id = "address" name = "address" value = "${user.address }" placeholder = "주소">
-         </td>
-         <td>
-
-         </td>
-      </tr>
-     
-   </table>
-   <div id = "signupdiv">
-			<button type="button" class="btn btn-primary btn-lg btn-block" id = "signup" name = "signup" onclick="userCreate()">가입하기</button>
-   </div>
-   <br>
-   
-   </form>
-   </fieldset>
 
 </div>
 <%@ include file="/common/footer.jsp" %>

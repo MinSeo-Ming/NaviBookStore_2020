@@ -68,8 +68,6 @@
 
  
 
- 
-
 </style>
 
 <script>
@@ -77,6 +75,15 @@
 var i=0;
 
 var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부산점에는"];
+
+function showMap(index) {
+	if(index==0)
+	   window.open("<%=request.getContextPath()%>/map.jsp","map","width=900,height=700");
+	else if(index==1)
+		   window.open("<%=request.getContextPath()%>/map2.jsp","map","width=900,height=700");
+	else if(index==2)
+		   window.open("<%=request.getContextPath()%>/map3.jsp","map","width=900,height=700");
+	}
 
 </script>
 
@@ -123,12 +130,25 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 				<td >${book.author}</td>
 
 				<td >
+            	 <c:if test="${empty login}">
 
-				<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal${vs.index}" id="viewDetailButton${vs.index}">
+               <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal${vs.index}" id="viewDetailButton${vs.index}" style="visibility:hidden;">
 
-			         구매하기 
+                              구매하기 
 
-			  	</button>
+                </button>
+
+              </c:if>
+
+              <c:if test="${!empty login }">
+
+                 <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal${vs.index}" id="viewDetailButton${vs.index}"style="visibility: visible;">
+
+                           구매하기 
+
+              </button>
+
+              </c:if>
 
 			  	<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2${vs.index}" id="viewDetailButton2${vs.index}">
 
@@ -164,7 +184,7 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 
 			      <div class="modal-body">
 
-     					<c:forTokens items="${book.count}" delims="-" var="item">
+     					<c:forTokens items="${book.count}" delims="-" var="item" varStatus="vss">
 
      					   	<div id="m_text"><script type="text/javascript">
 
@@ -184,8 +204,7 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 
      					   	<span>개가 남았습니다.</span>
 
-     					   	 <button type="button" class="btn btn-secondary" id="mod_bt">구매하기</button>
-
+     					   	 <button type="button" class="btn btn-secondary" id="mod_bt" onclick="showMap(${vss.index})">구매하기</button>
      					   	</div>
 
      					   	<br>	  
@@ -210,13 +229,13 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 
 			<div class="modal fade" id="myModal2${vs.index}" role="dialog">
 
-			  <div class="modal-dialog modal-dialog-centered" "role="document">
+			  <div class="modal-dialog modal-dialog-centered modal"style="max-width: 100%; width: auto; display: table;" "role="document">
 
 			    <div class="modal-content">
 
 			      <div class="modal-header">
 
-			        <h5 class="modal-title" id="exampleModalLongTitle">사진</h5>
+			  
 
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 
@@ -232,7 +251,7 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 
   
 
-				<img src="<c:url value='./resources/img/${book.bookno}.jpg' />" id="img${vs.index}" width="100" height="100">
+				<img src="<c:url value='./resources/img/${book.bookno}.jpg' />" class="img-fluid rounded" width=300px height=100px>
 
 			      </div>
 
