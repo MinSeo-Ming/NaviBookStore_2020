@@ -50,7 +50,7 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
         <th>제목</th>
         <th>작가</th>
         <th>출판사</th>
-        <th><span id="th-buy">구매/사진</span></th>
+        <th id="th-buy">구매/사진</th>
       </tr>
     </thead>
     <tbody>
@@ -100,7 +100,6 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 			    </div>
 			  </div>
 			 </div>
-	
 			
 
 			<!-- Modal(사진) -->
@@ -115,11 +114,7 @@ var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부�
 			      </div>
 			      
 			      <div class="modal-body">
-     					<div>	
-     					  <img src="./resources/img/01.jpg" width="100px" height="100px">
-     					 <span> </span>			  
-     					</div>
-     					<br>	  	
+     					사진	  			
 			      </div>
 			    </div>
 			  </div>	  
