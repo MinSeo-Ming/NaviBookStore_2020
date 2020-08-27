@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class Util {
 	static String driver ="oracle.jdbc.driver.OracleDriver";
-	static String url ="jdbc:oracle:thin:@localhost:1521:xe";
+	static String url ="jdbc:oracle:thin:@70.12.116.177:1521:xe";
 	static String user ="hr";
 	static String pw ="hr";
 	
