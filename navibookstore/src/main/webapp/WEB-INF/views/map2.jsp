@@ -82,7 +82,7 @@ table{
 			<div id = map> </div>
 		</td>
 		<td id = "td"> 
-		<div id = "d1">도착위치 <br> 알라딘 대전점</div>
+		<div id = "d1">도착위치 <br> Navi 대전점</div>
 		<br>
 
 		<div id = "d2">
@@ -114,7 +114,7 @@ table{
 	let marker = new google.maps.Marker({
 		position : p,
 		map : map,
-		label : '알라딘 대전점'		
+		label : 'Navi 대전점'		
 	});
 </script>
 <script>
@@ -134,8 +134,8 @@ $(function(){
 				console.log(data.weather[0].main);
 				console.log(data.weather[0].description);
 				let tag = "현재대전점의 날씨는..<br> "+ Math.round(data.main.temp-273.15) +"℃ / "+ data.weather[0].main;
-				if(data.weather[0].main=="Clouds"){
-					$('#weatherimg').attr('src',"${pageContext.request.contextPath}/resources/img/구름.JPG")
+				if(data.weather[0].main=="Clear"){
+					$('#weatherimg').attr('src',"${pageContext.request.contextPath}/resources/img/맑음.JPG")
 				}
 				else if(data.weather[0].main=="Thunderstorm"){
 					$('#weatherimg').attr('src',"${pageContext.request.contextPath}/resources/img/번개.JPG")
@@ -144,7 +144,7 @@ $(function(){
 					$('#weatherimg').attr('src',"${pageContext.request.contextPath}/resources/img/비.JPG")
 				}
 				else{
-					$('#weatherimg').attr('src',"${pageContext.request.contextPath}/resources/img/맑음.JPG")
+					$('#weatherimg').attr('src',"${pageContext.request.contextPath}/resources/img/구름.JPG")
 				}
 				$('#weather').html(tag);
 			},//success

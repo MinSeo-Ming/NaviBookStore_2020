@@ -29,6 +29,7 @@ font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", R
 </style>
 <div id="foot">
 
+<img alt="~~" src="resources/img/navi_w.png" style="position: absolute; bottom: 0px; left: 5px; width: 50px; height: 50px;">
 <table id="foot-cen">
 <tr>
 <th>대표 email</th>

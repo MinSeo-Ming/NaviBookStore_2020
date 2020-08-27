@@ -160,7 +160,17 @@ height: 100px;
 width: 100%;
 height: 100%;
 }
-
+#imgs2{
+position : fixed;
+bottom: 100px;
+right: 10px;
+width: 120px;
+height: 100px;
+}
+#imgs2 img{
+width: 100%;
+height: 100%;
+}
  
 
 </style>
@@ -175,7 +185,7 @@ var i=0;
 
  
 
-var loc=["알라딘 강남점에는","알라딘 대전점에는","알라딘 부산점에는"];
+var loc=["Navi 강남점에는","Navi 대전점에는","Navi 부산점에는"];
 
  
 
@@ -183,15 +193,15 @@ function showMap(index) {
 
 	if(index==0)
 
-	   window.open("<%=request.getContextPath()%>/map.jsp","map","width=900,height=700");
+	   window.open("<%=request.getContextPath()%>/map.do","map","width=900,height=700");
 
 	else if(index==1)
 
-		   window.open("<%=request.getContextPath()%>/map2.jsp","map","width=900,height=700");
+		   window.open("<%=request.getContextPath()%>/map2.do","map","width=900,height=700");
 
 	else if(index==2)
 
-		   window.open("<%=request.getContextPath()%>/map3.jsp","map","width=900,height=700");
+		   window.open("<%=request.getContextPath()%>/map3.do","map","width=900,height=700");
 
 	}
 
@@ -210,7 +220,9 @@ function showMap(index) {
 <a id="imgs" href="#">
 	<img  id="title" alt="~~~" src="resources/img/littleT.png"  >
 </a>
-
+<a id="imgs2" href="#">
+	<img  id="titl2e" alt="~~~" src="resources/img/navi.png"  >
+</a>
 
  <form method="post" action="list2.do">
 	<div id="search">
