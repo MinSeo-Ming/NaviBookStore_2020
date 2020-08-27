@@ -134,8 +134,8 @@ $(function(){
 				console.log(data.weather[0].main);
 				console.log(data.weather[0].description);
 				let tag = "현재부산점의 날씨는..<br> "+ Math.round(data.main.temp-273.15) +"℃ / "+ data.weather[0].main;
-				if(data.weather[0].main=="Clouds"){
-					$('#weatherimg').attr('src',"${pageContext.request.contextPath}/resources/img/구름.JPG")
+				if(data.weather[0].main=="Clear"){
+					$('#weatherimg').attr('src',"${pageContext.request.contextPath}/resources/img/맑음.JPG")
 				}
 				else if(data.weather[0].main=="Thunderstorm"){
 					$('#weatherimg').attr('src',"${pageContext.request.contextPath}/resources/img/번개.JPG")
@@ -144,7 +144,7 @@ $(function(){
 					$('#weatherimg').attr('src',"${pageContext.request.contextPath}/resources/img/비.JPG")
 				}
 				else{
-					$('#weatherimg').attr('src',"${pageContext.request.contextPath}/resources/img/맑음.JPG")
+					$('#weatherimg').attr('src',"${pageContext.request.contextPath}/resources/img/구름.JPG")
 				}
 				$('#weather').html(tag);
 			},//success
